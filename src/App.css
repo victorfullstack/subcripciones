@@ -7,10 +7,15 @@ body{
   /* background-repeat: no-repeat; */
 }
 :root{
-  --bg--color:#FEFEFC;
-  --second-bg-color:#DEDACF;
-  --text--color:#393631;
-  --main--color:#9E6D4C;
+  --color--:#ff020282;
+  --color--acua:aquamarine;
+  --bg--color:#fff;
+  --alert--color:#d52121;
+  --second-bg-color:rgb(250 250 250 / 68%);
+  --text--color:#060708;
+  --main--color:rgb(33 150 243 / 68%) 0px 0px 1rem 2px;
+  --desvanecio-color:linear-gradient(130deg, rgb(33, 150, 243), rgb(103, 214, 205));
+  ---color--two:#2499f18c;
 
 
 }
@@ -18,8 +23,8 @@ body{
   width: 60%;
   margin: 0 auto;
   text-align: center;
-  background-image: linear-gradient(130deg, rgb(33, 150, 243), rgb(103, 214, 205));
-  box-shadow: rgb(33 150 243 / 68%) 0px 0px 1rem 2px;
+  background-image: var(--desvanecio-color);
+  box-shadow: var(--main--color);
   border-radius: 10px;
   margin-top: 3%;
   padding-bottom: 5%;
@@ -27,7 +32,7 @@ body{
 .header{
   padding: 2% 0;
   font-size: 19px;
-  color: #fff;
+  color:var(--bg--color);
 }
 .header h2 {
   text-transform: uppercase;
@@ -49,17 +54,17 @@ body{
   border: 0px;
   border-radius: 5px;
   cursor: pointer;
-  background-color: #060708;
-  color: #fff;
+  background-color:var(--text--color);
+  color:var(--bg--color);
 }
 .form-add-money p {
-  color: #fff;
+  color:var(--bg--color);
   font-weight: 500;
 }
 
 p.error {
-  color: #fff;
-  background-color: #d52121;
+  color: var(--bg--color);
+  background-color:var(--alert--color);
   display: inline-block;
   padding: 1px 18px 4px;
   border-radius: 7px;
@@ -76,7 +81,7 @@ p.error {
 
 .balance {
   text-align: left;
-  background-color: rgb(250 250 250 / 68%);
+  background-color: var(--second-bg-color);
   border-radius: 13px 47px;
   padding: 12px 15px;
   display: grid;
@@ -85,7 +90,7 @@ p.error {
 
 .add-subscription form p {
   font-weight: 400;
-  color: #fff;
+  color: var(--bg--color);
   margin-bottom: 4px;
 }
 .add-subscription h3 {
@@ -118,21 +123,21 @@ p.error {
   border: 0px;
   border-radius: 5px;
   cursor: pointer;
-  background-color: #060708;
-  color: #fff;
+  background-color:var(--text--color);
+  color:var(--bg--color);
   transition-duration: .7s;
   font-weight: 600;
 }
 .add-subscription input[type="submit"]:hover {
-  background-color: #fff;
-  color: #060708;
+  background-color: var(--bg--color);
+  color: var(--text--color);
 }
 /* single item */
 .single-item {
   display: flex;
   justify-content: space-around;
   align-items: center; 
-  background-color: #fff;
+  background-color: var(--bg--color);
   margin-bottom: 3%;
   border-radius: 10px;
   height: 110px;
@@ -141,16 +146,16 @@ p.error {
 .single-item a{
   text-decoration: none;
   font-weight: 600;
-  background-color: aquamarine;
+  background-color: var(--color--acua);
   padding: 5px 11px 8px;
   border-radius: 5px;
-  color: #000;
+  color: var(--text--color);
 }
 .single-item a.delete:hover {
-  background-color: #ff020282;
+  background-color: var(--color--);
 }
 .single-item a.edit:hover {
-  background-color: #2499f18c;
+  background-color: var(---color--two);
 }
 .single-item img{
   width: 155px;
@@ -162,10 +167,10 @@ p.author {
   justify-content: center;
   margin-top: 3%;
   gap: 7px;
-  color: #000;
+  color: var(--text--color);
 }
 p.author a {
   text-decoration: none;
   font-weight: 700;
-  color: #000;
+  color:var(--text--color);
 }
