@@ -1,6 +1,6 @@
 import SimgleItems from "./SimgleItems";
 
-const DisplayItems = ({ subs , eliminarItem }) => {
+const DisplayItems = ({ subs , eliminarItem, editItem }) => {
     return(
         <>
      <h2>suscripciones</h2>
@@ -11,7 +11,8 @@ const DisplayItems = ({ subs , eliminarItem }) => {
         id={item.id}
         price={item.price}
         type={item.type} 
-        eliminarItem={eliminarItem}/>
+        eliminarItem={eliminarItem}
+        editItem={editItem}/>
        ))
      }
      </>

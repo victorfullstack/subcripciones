@@ -1,5 +1,5 @@
 import { moneyFormat } from "../helpers";
-const SimgleItems = ({price, type, id ,eliminarItem}) =>{
+const SimgleItems = ({price, type, id ,eliminarItem, editItem}) =>{
 
     const urlImage = ` /src/images/${type}.png`;
 
@@ -11,13 +11,17 @@ const SimgleItems = ({price, type, id ,eliminarItem}) =>{
             
         }
     }
+    const handleEdit = e =>{
+        e.preventDefault();
+        editItem(id);
+    }
 
     return(
          <div className="single-item">
             <img src={urlImage} alt="services" />
             <h3>precio: {price}</h3>
             <a href="" className="delete" onClick={handleDelete} >Borrar</a>
-            <a href="">editar</a>
+            <a href="" className="edit" onClick={handleEdit}>editar</a>
          </div>
     );
 }
